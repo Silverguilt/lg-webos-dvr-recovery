@@ -1,22 +1,22 @@
-# Public-release review
+# Publication review
 
-## Decision for the initial repository
+## Technical review — 2026-11-09
 
-Private only. The original project-written decryption script contains no embedded key, private SSH material or vendor code. It is included as an archival implementation, with limitations documented. No firmware, binaries, decompiled source, recordings or raw metadata are included. No permissive license is granted yet.
+The owner requested public publication following review. The ten repository files and both pre-publication commits were inspected. The initial commit contains only README.md; the second adds the nine other reviewed files. Only main was returned by branch search. No embedded AES key, private SSH key, recording, firmware, LG binary or decompiled source was found. The project-written script is unchanged from the supplied source and asks for the key with getpass.
 
-## Specific risks of releasing the tool
+Detect-secrets 1.5.0 scanned all ten local files matching the fetched repository content and returned zero findings. Manual review and syntax/link checks supplement that scan; no scanner guarantees absence of secrets. The historical README is identical to the scanned pre-publication README. No raw data or binary fixtures are included.
 
-A keyless tool still describes and implements a protection-removal method. Others may combine it with keys or media obtained without authorization. Publication can raise copyright, anti-circumvention, contractual and reverse-engineering questions that depend on jurisdiction, provenance and purpose. Owning a TV or making a recording does not by itself settle those questions. This is a release risk assessment, not a legal determination or a claim of a statutory exception.
+## Legal scope remains unresolved
 
-The code itself does not extract keys or exploit a TV. Removing embedded secrets therefore reduces disclosure risk but does not resolve distribution rights or circumvention concerns. Operationally, it assumes this archive's encryption and ordering rules and could produce corrupt output on other variants.
+This is a technical/content review, not legal clearance. The [Swedish Copyright Act](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-1960729-om-upphovsratt-till-litterara-och_sfs-1960-729/), sections 52 c–e, distinguishes exclusions, circumvention and distribution of circumvention products/services. Section 52 d includes an exception concerning viewing/listening to a lawfully accessible copy; this does not establish that distributing a tool is permitted under 52 e. Section 52 c also includes exclusions, including cryptographic research. Applicability to this case has not been determined. No exception is claimed merely by describing the repository as research.
 
-## Before making public
+A keyless decryption implementation can be combined with unauthorized keys or media. Ownership of a TV or recording alone does not resolve publication rights, contractual restrictions or rules in other jurisdictions. The repository does not extract keys or exploit a TV, but that does not eliminate circumvention-distribution questions. Obtain qualified legal advice before relying on a right to distribute or use it.
 
-- Obtain a qualified review of applicable law and any relevant agreements, including whether publishing the decryption implementation is appropriate.
-- Confirm code authorship and rights, then choose an explicit license. Do not imply rights over LG code or broadcast content.
-- Decide whether the public repository should include the decryptor or documentation only. Removing it only in a later commit leaves it in history; create an independently reviewed clean public history if withholding it.
-- Review every commit, branch, tag, attachment and release for secrets and identifying metadata, with a dedicated secret scanner as well as manual review.
-- Improve parser validation, ordering checks and output creation if offering a supported tool; test using synthetic fixtures and authorized local samples.
-- Preserve the evidence distinction. Do not claim universal webOS compatibility, full-file integrity or ffprobe validation without new results.
+## Release scope and limits
 
-This checklist is intentionally unresolved. The current review does not constitute legal clearance or production hardening.
+- The archival decryptor is included, with no embedded secret or vendor code.
+- No general reuse license has been granted. Visibility and licensing are separate decisions.
+- No claim of universal LG/webOS compatibility, full-file integrity or ffprobe validation is made.
+- Playback success remains original-session user-reported evidence; no media recovery was rerun during this review.
+- Parser hardening, synthetic fixtures, dependency pinning and a full decode audit remain future work if a supported tool is desired.
+- Removing a file in a later commit does not remove it from public history or copies already made.

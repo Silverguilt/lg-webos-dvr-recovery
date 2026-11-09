@@ -1,6 +1,6 @@
 # Security policy
 
-Keep this repository private until the publication review is complete. Do not attach raw archives, keys, device identifiers, firmware, LG executables, memory dumps or connection transcripts to issues or pull requests.
+Do not attach raw archives, keys, device identifiers, firmware, LG executables, memory dumps or connection transcripts to issues or pull requests.
 
 The script accepts a key through a hidden interactive prompt. It does not log or persist it, but the key exists in process memory and is not securely erased. Run only on a trusted local machine. The device identifier check is heuristic and AES-ECB is unauthenticated.
 

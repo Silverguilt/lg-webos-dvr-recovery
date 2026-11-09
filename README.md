@@ -2,7 +2,7 @@
 
 A case study in recovering two personally held TV recordings from an LG webOS DVR archive. This repository documents the reverse engineering, packet-aware AES decryption and verification used in that recovery.
 
-**Status:** private research archive; not ready for public release. No keys, recordings, firmware or LG binaries are included. Compatibility beyond the two recordings is unknown.
+**Status:** research case study; archival implementation with known limitations. No keys, recordings, firmware or LG binaries are included. Compatibility beyond the two recordings is unknown.
 
 ## Outcome
 
@@ -37,4 +37,4 @@ The script is an archival implementation, not a hardened general-purpose parser.
 
 Documentation is based on the supplied script and recovered notes from the original conversation. Raw investigation logs and binaries are deliberately excluded. Recovered discussion summaries are labeled as such; absent details have not been reconstructed. No third-party implementation or decompiled LG source is included.
 
-No redistribution license has been selected pending the public-release review. LG, webOS and other names remain their respective owners' marks. This project is unaffiliated with LG.
+No redistribution license has been selected. Public visibility does not grant a general reuse license. LG, webOS and other names remain their respective owners' marks. This project is unaffiliated with LG.

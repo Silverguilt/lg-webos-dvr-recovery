@@ -21,3 +21,7 @@ Run a full TS continuity/PAT/PMT/PES audit and a complete audio/video decode on 
 ## Review performed for this repository
 
 The supplied source was inspected for embedded keys, SSH material, network access and LG binary/decompiled code. No embedded secret values were found. Its AES key is entered with `getpass`. The repository excludes raw investigation logs and media. Pre-commit checks passed: Python AST syntax parsing, relative Markdown link resolution, exact byte comparison of the archived script against the supplied source, and pattern checks for private-key headers, long hexadecimal values and common GitHub token prefixes. These pattern checks are not a dedicated secret scanner or a guarantee. No original media is available for an end-to-end rerun.
+
+## Publication review — 2026-11-09
+
+The ten files fetched from GitHub matched the previously reviewed local contents. Both existing commits were inspected; the first contains only the same README and the second adds the remaining nine files. Detect-secrets 1.5.0 scanned all ten files and returned zero findings. The source remains byte-identical to the supplied script. These are technical checks; legal clearance and end-to-end media verification are not claimed.
